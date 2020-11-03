@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysundayapp
+  labels:
+    name: mysundayapp
+spec:
+  containers:
+  - name: mysundayapp
+    image: mysundayapp
+    ports:
+    - containerPort: 80
