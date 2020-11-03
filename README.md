@@ -11,5 +11,11 @@ kubectl create namespace sundayfun
 ## Create an Application
 Creating an application is all about asking Kubernetes to run a container created from the given image
 
+```
+cd sundayfunapp
+docker build -t sundayfunapp
+docker push
 
+kubectl create -f ./my-sundayapp.yaml
+```
 
