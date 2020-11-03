@@ -1,7 +1,9 @@
 # sundayfun
 Kubernetes session for friends
 
-##Create Namespace
+## Create Namespace
+```
 kubectl create -f ./my-namespace.yaml
 or
 kubectl create namespace sundayfun
+```
