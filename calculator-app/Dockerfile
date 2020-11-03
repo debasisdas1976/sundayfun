@@ -1,2 +1,2 @@
 FROM nginx
-COPY sundayfunapp /usr/share/nginx/html
+COPY htmlsrc /usr/share/nginx/html
