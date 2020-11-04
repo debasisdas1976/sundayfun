@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sundayfunapp-deployment
+  labels:
+    app: sundayfunapp
+spec:
+  selector:
+    matchLabels:
+      app: sundayfunapp
+  template:
+    metadata:
+      labels:
+        app: sundayfunapp
+    spec:
+      containers:
+      - name: sundayfunapp
+        image: debasisdas1976/sundayfunapp
+        ports:
+        - containerPort: 80
