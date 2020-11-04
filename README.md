@@ -6,6 +6,7 @@ Kubernetes session for friends
 kubectl create -f ./my-namespace.yaml
 or
 kubectl create namespace sundayfun
+kubectl config set-context --current --namespace=sundayfunapp
 ```
 
 ## Create an Application
