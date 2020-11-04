@@ -45,8 +45,9 @@ Delete the application Pod as we can't do much with it
 kubectl delete pod sundayfunapp
 ```
 ## Deploy Application to Kubernetes
-
-
+```
+kubectl create -f ./my-deployment.yaml
+```
 
 
 
