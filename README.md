@@ -48,6 +48,10 @@ kubectl delete pod sundayfunapp
 ```
 kubectl create -f ./my-deployment.yaml
 ```
-
+## Expose your application inside Kubernetes
+Create a service
+```
+kubectl create -f ./my-service.yaml
+```
 
 
