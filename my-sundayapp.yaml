@@ -7,6 +7,6 @@ metadata:
 spec:
   containers:
   - name: mysundayapp
-    image: mysundayapp
+    image: debasisdas1976/sundayfunapp
     ports:
     - containerPort: 80
