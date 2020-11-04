@@ -48,6 +48,11 @@ kubectl delete pod sundayfunapp
 ```
 kubectl create -f ./my-deployment.yaml
 ```
+## Scale your Application
+```
+kubectl scale deployment sundayfunapp-deployment --replicas 2
+```
+
 ## Expose your application inside Kubernetes
 Create a service
 ```
