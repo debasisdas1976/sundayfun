@@ -32,6 +32,21 @@ docker push debasisdas1976/sundayfunapp
 ```
 ### Create your application in kubernetes
 ```
-kubectl create -f ./my-sundayapp.yaml
+kubectl create -f ./my-sundayapp.yaml -n sundayfun
 ```
+### Check your application is running or not
+```
+kubectl get pods
+kubectl exec -it sundayfunapp bash
+curl http://localhost
+```
+Delete the application Pod as we can't do much with it
+```
+kubectl delete pod sundayfunapp
+```
+## Deploy Application to Kubernetes
+
+
+
+
 
