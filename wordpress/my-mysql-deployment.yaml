@@ -1,1 +1,20 @@
-   
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-deployment
+  labels:
+    app: mysql
+spec:
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+      - name: mysql
+        image: registry.access.redhat.com/rhscl/mysql-57-rhel7:5.7-47
+        ports:
+        - containerPort: 3306
