@@ -1,7 +1,7 @@
 # Sunday Fun
 Kubernetes session for friends
 
-## Create Namespace
+## 1. Create Namespace
 ```
 kubectl create -f ./my-namespace.yaml
 or
@@ -9,7 +9,7 @@ kubectl create namespace sundayfun
 kubectl config set-context --current --namespace=sundayfunapp
 ```
 
-## Create an Application
+## 2. Create an Application
 Creating an application is all about asking Kubernetes to run a container created from the given image
 
 ### Build your application docker image
@@ -44,21 +44,21 @@ Delete the application Pod as we can't do much with it
 ```
 kubectl delete pod sundayfunapp
 ```
-## Deploy Application to Kubernetes
+## 3. Deploy Application to Kubernetes
 ```
 kubectl create -f ./my-deployment.yaml
 ```
-## Scale your Application
+## 4. Scale your Application
 ```
 kubectl scale deployment sundayfunapp-deployment --replicas 2
 ```
 
-## Expose your application inside Kubernetes
+## 5. Expose your application inside Kubernetes
 Create a service
 ```
 kubectl create -f ./my-service.yaml
 ```
-## Data Handling
+## 6. Data Handling
 
 Create a mount directory and create a file that we will use from inside the application
 ```
@@ -77,7 +77,7 @@ Create an application that uses the PVCs that are created above
 kubectl create -f my-deployment-pvc.yaml
 kubectl create -f my-service-pvc.yaml
 ```
-## Environment Variables
+## 7. Environment Variables
 Create a secret
 ```
 kubectl create secret generic mysql-secret --from-literal user=wpuser --from-literal password=redhat123 --from-literal database=wordpress
