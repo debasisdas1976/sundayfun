@@ -80,7 +80,7 @@ kubectl create -f my-service-pvc.yaml
 ## Environment Variables
 Create a secret
 ```
-
+kubectl create secret generic mysql-secret --from-literal user=wpuser --from-literal password=redhat123 --from-literal database=wordpress
 ```
 Create a MySQL Deployment that expects some environment variables
 ```
