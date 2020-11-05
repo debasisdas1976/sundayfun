@@ -60,6 +60,12 @@ kubectl create -f ./my-service.yaml
 ```
 ## Data Handling
 
+Create a mount directory and create a file that we will use from inside the application
+```
+mkdir -p /mnt/data
+cp index.html /mnt/data
+```
+
 Create a Persistent Volume and a Persistent Volume Claim
 ```
 kubectl create -f ./my-pv.yaml
