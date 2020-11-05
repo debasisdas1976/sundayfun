@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sundayfunapp-deployment
+  labels:
+    app: sundayfunapp
+spec:
+  selector:
+    matchLabels:
+      app: sundayfunapp
+  template:
+    metadata:
+      labels:
+        app: sundayfunapp
+    spec:
+      volumes:
+      - name: sundayfun-storage
+        persistentVolumeClaim:
+          claimName: sundayfun-pvc
+      containers:
+      - name: sundayfunapp
+        image: debasisdas1976/sundayfunapp
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - mountPath: "/usr/share/nginx/html"
+          name: sundayfun-storage
