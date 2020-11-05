@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sundayfunapp-deployment
+  name: sundayfunapp-deployment-pvc
   labels:
-    app: sundayfunapp
+    app: sundayfunapp-pvc
 spec:
   selector:
     matchLabels:
-      app: sundayfunapp
+      app: sundayfunapp-pvc
   template:
     metadata:
       labels:
-        app: sundayfunapp
+        app: sundayfunapp-pvc
     spec:
       volumes:
       - name: sundayfun-storage
         persistentVolumeClaim:
           claimName: sundayfun-pvc
       containers:
-      - name: sundayfunapp
+      - name: sundayfunapp-pvc
         image: debasisdas1976/sundayfunapp
         ports:
         - containerPort: 80
