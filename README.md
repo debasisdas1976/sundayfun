@@ -58,5 +58,22 @@ Create a service
 ```
 kubectl create -f ./my-service.yaml
 ```
+## Data Handling
+
+Create a Persistent Volume and a Persistent Volume Claim
+```
+kubectl create -f ./my-pv.yaml
+kubectl create -f ./my-pvc.yaml
+```
+Create an application that uses the PVCs that are created above
+
+```
+kubectl create -f my-deployment-pvc.yaml
+kubectl create -f my-service-pvc.yaml
+```
+
+
+
+
 
 
