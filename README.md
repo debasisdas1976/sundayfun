@@ -77,6 +77,25 @@ Create an application that uses the PVCs that are created above
 kubectl create -f my-deployment-pvc.yaml
 kubectl create -f my-service-pvc.yaml
 ```
+## Environment Variables
+Create a secret
+```
+
+```
+Create a MySQL Deployment that expects some environment variables
+```
+kubectl create -f ./wordpress/my-mysql-deployment.yaml
+```
+As you can notice, the Pod fails to start as it expects some environment variables. 
+Pass the environment variables from the secret that you created earlier
+```
+kubectl delete deployment mysql-deployment
+kubectl create -f ./wordpress/my-mysql-deployment-secret.yaml
+```
+
+
+
+
 
 
 
